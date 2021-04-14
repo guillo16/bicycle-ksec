@@ -1,5 +1,5 @@
 class Api::V1::CategoriesController < Api::V1::BaseController
-  acts_as_token_authentication_handler_for User, except: %w[index show]
+  acts_as_token_authentication_handler_for User, except: :index
   before_action :set_category, only: %w[update destroy]
 
   def index
